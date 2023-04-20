@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans:ital,wght@0,400;1,300&display=swap');
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font{
+    font-family: 'Dancing Script', cursive;
+}
+
+textarea {
+    resize: none;
+}
+
+@media screen and (max-width: 640px) {
+    .skills-container .grid-cols-3 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+
+@layer base {
+    body{
+        @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+        font-sans
+    }
+
+    h1, h2, h3, h4, h5 {
+        @apply font-bold
+    }
+
+    h1 { 
+        @apply text-4xl sm:text-5xl md:text-6xl
+    }
+
+    h2 {
+        @apply text-3xl sm:text-4xl
+    }
+
+    li {
+        @apply cursor-pointer
+    }
+
+    button {
+        @apply border-white px-4 py-1 rounded-lg uppercase bg-[#f96d00] hover:bg-[#f5aa70] text-white
+    }
+}
